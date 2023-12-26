@@ -686,9 +686,11 @@ class CarInterfaceBase(ABC):
       # Disable on rising and falling edge of cancel for both stock and OP long
       if b.type == ButtonType.cancel:
         if not cs_out.madsEnabled:
-          events.add(EventName.buttonCancel)
+          #events.add(EventName.buttonCancel)
+          pass
         elif not self.cruise_cancelled_btn:
-          self.cruise_cancelled_btn = True
+          #self.cruise_cancelled_btn = True
+          pass
           events.add(EventName.manualLongitudinalRequired)
       # do disable on MADS button if ACC is disabled
       if b.type == ButtonType.altButton1 and b.pressed and self.enable_mads:
